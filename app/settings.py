@@ -57,7 +57,9 @@ ROOT_URLCONF = "app.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [
+            os.path.join(BASE_DIR, 'hello/templates'),
+        ],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -78,12 +80,12 @@ WSGI_APPLICATION = "app.wsgi.application"
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd8tb2jg3ktbgdt',
-        'USER': 'mbajjjbrngaehz',
-        'PASSWORD': '935891ac70cc0a1919c4ca5ac7ab873b051b2ecf109914e89bd6c06c28fc3056',
-        'HOST': 'ec2-18-214-208-89.compute-1.amazonaws.com',
-        'PORT': '5432',
+        'ENGINE': os.environ.get('ENGINE_PROJECTZERO'),
+        'NAME': os.environ.get('NAME_PROJECTZERO'),
+        'USER': os.environ.get('USER_PROJECTZERO'),
+        'PASSWORD': os.environ.get('PASSWORD_PROJECTZERO'),
+        'HOST': os.environ.get('HOST_PROJECTZERO'),
+        'PORT': os.environ.get('PORT_PROJECTZERO'),
     }
 }
 
