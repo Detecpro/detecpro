@@ -80,12 +80,12 @@ WSGI_APPLICATION = "app.wsgi.application"
 
 DATABASES = {
     'default': {
-        'ENGINE': os.environ.get('ENGINE_PROJECTZERO'),
-        'NAME': os.environ.get('NAME_PROJECTZERO'),
-        'USER': os.environ.get('USER_PROJECTZERO'),
-        'PASSWORD': os.environ.get('PASSWORD_PROJECTZERO'),
-        'HOST': os.environ.get('HOST_PROJECTZERO'),
-        'PORT': os.environ.get('PORT_PROJECTZERO'),
+        'ENGINE': os.environ.get('ENGINE_DETECPRO'),
+        'NAME': os.environ.get('NAME_DETECPRO'),
+        'USER': os.environ.get('USER_DETECPRO'),
+        'PASSWORD': os.environ.get('PASSWORD_DETECPRO'),
+        'HOST': os.environ.get('HOST_DETECPRO'),
+        'PORT': os.environ.get('PORT_DETECPRO'),
     }
 }
 
